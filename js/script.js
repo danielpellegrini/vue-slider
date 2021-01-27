@@ -25,8 +25,20 @@ new Vue({
       } else {
         this.imagesIndex -= 1;
       }
+    },
 
+    activeDot: function(index) {
+      if (index !== this.imagesIndex) {
+        return 'fas fa-circle'
+      } else {
+        return 'fas fa-circle active'
+      }
+    },
+
+    clickedDot: function(index) {
+      this.imagesIndex = index;
     }
+
   }
 
 });
